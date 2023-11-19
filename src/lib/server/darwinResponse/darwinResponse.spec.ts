@@ -1,8 +1,12 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeAll } from 'vitest';
 import axios from 'axios';
 import { sendDarwinRequest } from './';
 
 describe('darwinResponse test suite', () => {
+	beforeAll(() => {
+		vi.stubEnv('DARWIN_ENDPOINT', 'endpoint');
+	});
+
 	it('Returns 200 OK correctly', async () => {
 		const spy = vi
 			.spyOn(axios, 'post')
