@@ -4,8 +4,8 @@ import { serviceBoardParams } from './params';
 export const arrivalsTemplate =
 	soapHeader +
 	`<soap:Body>` +
-	`<ldb:GetArrivalDepartureBoardRequest>` +
+	`<ldb:GetArrivalBoardRequest>` +
 	serviceBoardParams +
-	`</ldb:GetArrivalDepartureBoardRequest>` +
+	`</ldb:GetArrivalBoardRequest>` +
 	`</soap:Body>` +
 	`</soap:Envelope>`;
