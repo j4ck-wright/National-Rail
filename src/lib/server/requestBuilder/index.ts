@@ -9,11 +9,10 @@ export function buildXMLString(
 		output = output.replace('!!' + `${key}` + '!!', `${value}`);
 	}
 
-	const regex = new RegExp('(<.*?!!.*?!!.*?>)', 'g'); // Removing empty values e.g. <ldb:filterType>!!FILTERTYPE!!</ldb:filterType> would be removed
-	const removeNewlineRegex = new RegExp('\r?\n|\r', 'g');
+	const removeEmptyValues = new RegExp('(<.*?!!.*?!!.*?>)', 'g');
 
-	output = output.replaceAll(regex, '');
-	output = output.replaceAll(removeNewlineRegex, '');
+	output = output.replaceAll(removeEmptyValues, '');
+	output = output.replaceAll('\n', '');
 
 	return output;
 }
