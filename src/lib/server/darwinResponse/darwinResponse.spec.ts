@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest';
+import { describe, it, expect, vi, beforeAll } from 'vitest';
 import axios from 'axios';
 import { sendDarwinRequest } from './';
 
