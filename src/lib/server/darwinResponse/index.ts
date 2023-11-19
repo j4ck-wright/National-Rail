@@ -1,4 +1,4 @@
-import axios, { type AxiosResponse, AxiosError } from 'axios';
+import axios, { type AxiosResponse } from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -15,7 +15,7 @@ export async function sendDarwinRequest(body: string) {
 			statusMsg: request.statusText,
 			data: (await request.data) as XMLHttpRequestBodyInit
 		};
-	} catch (error: unknown | AxiosError) {
+	} catch (error: unknown) {
 		if (axios.isAxiosError(error)) {
 			if (error.response) {
 				return {

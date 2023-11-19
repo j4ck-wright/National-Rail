@@ -1,7 +1,7 @@
 import { buildXMLString } from './';
 import { departuresTemplate, serviceDetailsTemplate } from '$lib/server/templates';
 
-import { describe, it, expect, afterEach, vi, beforeEach, beforeAll, afterAll } from 'vitest';
+import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest';
 
 describe('requestBuilder.ts test suite', () => {
 	afterAll(() => {
